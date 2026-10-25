@@ -1,0 +1,88 @@
+{
+ "_comment": "検索精度検証の標本クエリ。医師・クラーク検証時はこのファイルを編集する。expect_code_prefix は上位top_k件のいずれかのcodeがこの文字列で始まればOK（null ならカテゴリ一致のみ）。min_score は期待チャンクのコサイン類似度の下限。 expect_title_contains は上位top_k件のいずれかのtitleにこの文字列が含まれればOK。",
+ "top_k": 5,
+ "queries": [
+  {
+   "query": "腰痛",
+   "category": "icd10",
+   "expect_code_prefix": "M54",
+   "min_score": 0.8,
+   "note": "要件書の「脇誘痛」は文字化けと判断し「腰痛」（M54 背部痛）と解釈"
+  },
+  {
+   "query": "DPC 脂質異常症",
+   "category": "dpc",
+   "expect_code_prefix": null,
+   "min_score": 0.82,
+   "note": "要件書の「脂質肾糧」は文字化けと判断し「脂質異常症」と解釈（要確認）"
+  },
+  {
+   "query": "肺炎コード",
+   "category": "icd10",
+   "expect_code_prefix": "J18",
+   "min_score": 0.8
+  },
+  {
+   "query": "急性心筋梗塞のICDコード",
+   "category": "icd10",
+   "expect_code_prefix": "I21",
+   "min_score": 0.8
+  },
+  {
+   "query": "2型糖尿病",
+   "category": "icd10",
+   "expect_code_prefix": "E11",
+   "min_score": 0.8
+  },
+  {
+   "query": "DPC 脳梗塞",
+   "category": "dpc",
+   "expect_code_prefix": "010060",
+   "min_score": 0.8
+  },
+  {
+   "query": "DPC 大腿骨頸部骨折 人工骨頭挿入術",
+   "category": "dpc",
+   "expect_code_prefix": "160800",
+   "min_score": 0.8
+  },
+  {
+   "query": "アスピリン用法用量",
+   "category": "formulary",
+   "expect_title_contains": "バイアスピリン",
+   "expect_code_prefix": null,
+   "min_score": 0.85,
+   "note": "PMDA添付文書の代替として院内医薬品集で検証"
+  },
+  {
+   "query": "ワルファリンの初回量",
+   "category": "formulary",
+   "expect_title_contains": "ワーファリン",
+   "expect_code_prefix": null,
+   "min_score": 0.8
+  },
+  {
+   "query": "ソラナックスの院内採用薬は？",
+   "category": "formulary",
+   "expect_title_contains": "アルプラゾラム",
+   "expect_code_prefix": null,
+   "min_score": 0.8
+  },
+  {
+   "query": "院内で使える睡眠薬",
+   "category": "formulary",
+   "expect_title_contains": null,
+   "expect_code_prefix": "112",
+   "min_score": 0.75,
+   "note": "薬品名を含まない質問（埋め込み検索のみで探す）"
+  },
+  {
+   "query": "アトピー性皮膚炎外用薬",
+   "category": "formulary",
+   "expect_title_contains": null,
+   "expect_code_prefix": "26",
+   "min_score": 0.75,
+   "note": "院内医薬品集には効能の記載がないため、薬効分類 26x（外皮用薬）が出れば可"
+  }
+ ]
+}

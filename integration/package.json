@@ -1,0 +1,11 @@
+{
+  "name": "medical-rag-db-integration-test",
+  "private": true,
+  "description": "rag.js を Node.js 上で検証するためのテスト環境（medical-ai-app には含めない）",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^12.4.1"
+  }
+}

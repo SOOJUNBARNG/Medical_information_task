@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- テスト用の架空の添付文書。要素名は PMDA 電子添文XMLの構造を模したもの。 -->
+<PackIns xmlns="http://info.pmda.go.jp/namespace/prescription_drugs/package_insert/1.0">
+  <ProductInfo>
+    <ApprovalBrandName><Lang xml:lang="ja">テストアスピリン錠100mg</Lang><Lang xml:lang="en">Test Aspirin Tablets</Lang></ApprovalBrandName>
+    <ApprovalNo>22100AMX00001</ApprovalNo>
+  </ProductInfo>
+  <Warnings>
+    <Header><Lang xml:lang="ja">1. 警告</Lang></Header>
+    <Detail><Lang xml:lang="ja">短い。</Lang></Detail>
+  </Warnings>
+  <ContraIndications>
+    <Header><Lang xml:lang="ja">2. 禁忌（次の患者には投与しないこと）</Lang></Header>
+    <Item><Detail><Lang xml:lang="ja">2.1 本剤の成分又はサリチル酸系製剤に対し過敏症の既往歴のある患者</Lang></Detail></Item>
+    <Item><Detail><Lang xml:lang="ja">2.2 消化性潰瘍のある患者［消化性潰瘍を悪化させるおそれがある。］</Lang></Detail></Item>
+  </ContraIndications>
+  <IndicationsOrEfficacy>
+    <Header><Lang xml:lang="ja">4. 効能又は効果</Lang></Header>
+    <Detail><Lang xml:lang="ja">狭心症（慢性安定狭心症、不安定狭心症）、心筋梗塞、虚血性脳血管障害における血栓・塞栓形成の抑制。</Lang></Detail>
+  </IndicationsOrEfficacy>
+  <Section>
+    <Header><Lang xml:lang="ja">6. 用法及び用量</Lang></Header>
+    <Detail><Lang xml:lang="ja">通常、成人にはアスピリンとして100mgを1日1回経口投与する。なお、症状により1回300mgまで増量できる。</Lang></Detail>
+  </Section>
+  <Section>
+    <Header><Lang xml:lang="ja">10. 相互作用</Lang></Header>
+    <Section>
+      <Header><Lang xml:lang="ja">10.1 併用禁忌（併用しないこと）</Lang></Header>
+      <Detail><Lang xml:lang="ja">このセクションは禁忌として扱わないこと。併用禁忌は相互作用の一部である。</Lang></Detail>
+    </Section>
+  </Section>
+  <AdverseEvents>
+    <Header><Lang xml:lang="ja">11. 副作用</Lang></Header>
+    <Section>
+      <Header><Lang xml:lang="ja">11.1 重大な副作用</Lang></Header>
+      <Detail><Lang xml:lang="ja">REPEAT_ADVERSE</Lang></Detail>
+    </Section>
+  </AdverseEvents>
+</PackIns>

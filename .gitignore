@@ -1,0 +1,19 @@
+# 院内データ（公開リポジトリには絶対に含めない）
+data/formulary/
+
+# 生成物・取得データ（再生成可能。rag.db は約300〜400MB）
+data/raw/
+data/rag.db
+data/rag.db-*
+data/*.db.building*
+data/chunks.jsonl
+data/embed_progress.jsonl
+data/embeddings.sqlite*
+data/*.log
+
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+integration/node_modules/
+integration/package-lock.json
